@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:JumpBoard"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="JumpBoard" Height="450" Width="800" Icon="jumping-dancer.ico">
     <Grid>
-
+        <Frame x:Name="MainFrame" Source="Start.xaml"/>
     </Grid>
 </Window>

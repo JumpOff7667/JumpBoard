@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using System;
+using System.Windows;
 
 namespace JumpBoard
 {
@@ -10,6 +11,14 @@ namespace JumpBoard
         public MainWindow()
         {
             InitializeComponent();
+
+            if (Properties.Settings.Default.FirstRun)
+            {
+                MainFrame.NavigationService.Navigate(new Uri("Start.xaml", UriKind.RelativeOrAbsolute));
+            } else
+            {
+                MainFrame.NavigationService.Navigate(new Uri("Home.xaml", UriKind.RelativeOrAbsolute));
+            }
         }
     }
 }
